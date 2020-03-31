@@ -5,6 +5,9 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  # ヒント　ruby 配列 要素を追加
+  names << "斎藤"
+  puts names
 
 end
 
@@ -13,7 +16,9 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  # Ruby 配列　結合
+  array3 = array1 + array2
+  puts array3
 end
 
 def q3
