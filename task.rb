@@ -17,15 +17,15 @@ def q2
 
   # 以下に回答を記載
   # Ruby 配列　結合
-  array3 = array1 + array2
-  puts array3
+  array1 = array1 + array2
+  p array1
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  numbers.select{|v| numbers.count(v) > 1}.uniq
 end
 
 def q4
