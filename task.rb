@@ -5,6 +5,9 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  # ヒント　ruby 配列 要素を追加
+  names << "斎藤"
+  puts names
 
 end
 
@@ -13,15 +16,21 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  # Ruby 配列　結合
+  array1 = array1 + array2
+  p array1
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
+<<<<<<< HEAD
   # '3'のみの数字の数を出力
   puts numbers.count(3)
+=======
+  numbers.select{|v| numbers.count(v) > 1}.uniq
+>>>>>>> 1600093c1f1fd14e1fe24f98dadccc042d244a73
 end
 
 def q4
