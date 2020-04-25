@@ -128,10 +128,11 @@ def q15
   data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" }
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
-  # 以下に回答を記載
-
+  #  以下に回答を記載
+  p data1.find {|key| key == "age"} ? "OK" : "NG"
+  p data2.find {|key| key == "age"} ? "OK" : "NG"
 end
-
+  
 def q16
   users = [
     { name: "satou", age: 22 },
