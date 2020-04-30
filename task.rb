@@ -177,7 +177,15 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(introduce)
+    @name = user[:name]
+    @age = user[:age]
+  end
 
+  def introduce
+    "こんにちは，あじーと申します。宜しくお願いいたします。"
+    "はいさいまいど〜，ゆたぼんです！！！"
+  end
 end
 
 def q18
@@ -191,6 +199,7 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_reader :name
 
   def initialize(name)
     @name = name
