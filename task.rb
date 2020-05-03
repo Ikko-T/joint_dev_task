@@ -177,16 +177,16 @@ end
 
   class UserQ18
     # 以下に回答を記載
-    def initialize(user)
+    def initialize(**user)
       @name = user[:name]
       @age = user[:age]
     end
 
     def introduce
-      if @age >= 30
-        "こんにちは，#{@name}と申します。宜しくお願いいたします。"
-      else
-        "はいさいまいど〜，#{@name}です！！！"
+      @age >= 20
+      case @age 
+      when 32 then "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      else "はいさいまいど〜，#{@name}です！！！"
       end
     end
   end
