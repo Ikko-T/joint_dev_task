@@ -183,10 +183,10 @@ end
     end
 
     def introduce
-      @age >= 20
-      case @age 
-      when 32 then "こんにちは，#{@name}と申します。宜しくお願いいたします。"
-      else "はいさいまいど〜，#{@name}です！！！"
+      if @age >= 20
+        "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      else
+        "はいさいまいど〜，#{@name}です！！！"
       end
     end
   end
