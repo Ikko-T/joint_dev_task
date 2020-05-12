@@ -220,7 +220,7 @@ class UserQ20
   # 以下に回答を記載
   attr_reader :name, :age
   
-  def initialize(user)
+  def initialize(**user)
     @name = user[:name]
     @age = user[:age]
   end
@@ -229,27 +229,27 @@ end
 
 class Zoo
   # 以下に回答を記載
-  def initialize(params)
+  def initialize(**params)
     @infant = params[:entry_fee][:infant]
     @children = params[:entry_fee][:children]
     @adult = params[:entry_fee][:adult]
     @senior = params[:entry_fee][:senior]
   end
-
+  
   def info_entry_fee(user)
 
-    case 
-    when @age = 0..5
-      "#{@name}さんの入場料金は#{@infant}円です。”    
-    when @age = 6..12
-      "#{@name}さんの入場料金は#{@children}円です。"
-    when @age = 13..64
-      "#{@name}さんの入場料金は#{@adult}円です。"
-    when @age = 65..120
-      "#{@name}さんの入場料金は#{@senior}円です。"
-    end
+    entry_fee = case user.age
+                when 0..5
+                  @infant    
+                when 6..12
+                  @children
+                when 13..64
+                  @adult
+                when 65..120
+                  @senior
+                end
 
-    puts info_entry_fee(user)
+    puts "#{user.name}さんの入場料金は#{entry_fee}円です。"
   
   end
 
